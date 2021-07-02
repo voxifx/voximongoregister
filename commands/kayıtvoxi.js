@@ -34,7 +34,7 @@ let member = message.mentions.members.first() || message.guild.members.cache.get
 
         collector.on("collect", async(reaction, user) => {
             await message.reactions.removeAll()
-            if (reaction.emoji.id == '859782588314288138') { //erkek
+            if (reaction.emoji.id == '859782588314288138') { //erkek emoji id
 
               member.roles.add(settings.erkekRolleri)
               member.roles.add(settings.erkekRolleri2)
@@ -78,10 +78,11 @@ member.setNickname(`${nick.charAt(0).toUpperCase() + nick.slice(1).toLowerCase()
                     registerData.save();
                   }
                   
-             message.react("<a:voxi_tik:859782588053848115>")
+             message.react("<a:voxi_tik:859782588053848115>") //bu işlem bittiğinde atacagı emoji
+             
            }
 
-if (reaction.emoji.id == '859782588293578762') { //kız
+if (reaction.emoji.id == '859782588293578762') { //kız emoji id
 
   member.roles.add(settings.kızRolleri)
   member.roles.add(settings.kızRolleri2)
@@ -123,7 +124,7 @@ member.setNickname(`${nick.charAt(0).toUpperCase() + nick.slice(1).toLowerCase()
                     registerData.save();
                   }
                   
-             message.react("<a:voxi_tik:859782588053848115>")
+             message.react("<a:voxi_tik:859782588053848115>")//bu işlem bittiğinde atacagı emoji
             }
         })
     }
